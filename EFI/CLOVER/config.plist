@@ -13,17 +13,17 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>AddMCHC</key>
 				<true/>
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixADP1</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -99,20 +99,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
 					<key>Disabled</key>
 					<false/>
@@ -169,34 +155,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SERBUw==
-					</data>
-					<key>Replace</key>
-					<data>
-					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change SAT0 to SATA</string>
 					<key>Disabled</key>
 					<false/>
@@ -211,15 +169,8 @@
 				</dict>
 			</array>
 			<key>Rtc8Allowed</key>
-			<true/>
+			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
 		<key>FixHeaders</key>
 		<true/>
 		<key>SSDT</key>
@@ -238,13 +189,15 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>gfxrst=1</string>
+		<string>gfxrst=1 darkwake=0 dart=0</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>HibernationFixup</key>
+		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverHibernate</key>
-		<true/>
+		<false/>
 		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Secure</key>
@@ -578,11 +531,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/19/2018</string>
+		<string>05/28/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP141.88Z.F000.B00.1812191142</string>
+		<string>MBP141.88Z.F000.B00.1905281616</string>
 		<key>Board-ID</key>
 		<string>Mac-B4831CEBD52A0C4C</string>
 		<key>BoardManufacturer</key>
@@ -598,7 +551,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>186.0.0.0.0</string>
+		<string>196.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -621,7 +574,7 @@
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
-		<string>Yes</string>
+		<string>Detect</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
